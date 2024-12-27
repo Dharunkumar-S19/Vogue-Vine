@@ -11,8 +11,6 @@
             color: #fff;
             overflow-x: hidden;
         }
-
-        /* Header Style */
         header {
             background: linear-gradient(90deg, #00bcd4, #006064);
             color: #fff;
@@ -30,9 +28,9 @@
             animation: textZoom 2s ease-in-out forwards;
         }
 
-        /* Container Style */
+        
         .container {
-            max-width: 600px;  /* Reduced width */
+            max-width: 600px; 
             margin: 40px auto;
             padding: 30px;
             background-color: #111;
@@ -48,7 +46,7 @@
             flex-direction: column;
         }
 
-        /* Form Styles */
+        
         input, textarea, select {
             background-color: #222;
             border: 1px solid #00e5ff;
@@ -118,7 +116,7 @@
             transform: scaleX(1);
         }
 
-        /* Footer Style */
+      
         footer {
             background: linear-gradient(90deg, #006064, #00bcd4);
             color: #fff;
@@ -133,7 +131,7 @@
             transform: translateY(-5px);
         }
 
-        /* Animations */
+      
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -173,12 +171,12 @@
     </header>
     
     <div class="container">
-        <!-- Title Section -->
+        
         <div class="section-title">
             <h2>How Can We Help You?</h2>
         </div>
         
-        <!-- Help Form -->
+        
         <div class="form-container">
             <label for="name">Full Name:</label>
             <input type="text" id="name" name="name" placeholder="Your Name" required>
@@ -201,7 +199,7 @@
             <button class="button" type="button" onclick="submitQuery()">Submit Query</button>
         </div>
 
-        <!-- Feedback Form -->
+        
         <div class="section-title">
             <h2>Provide Your Feedback</h2>
         </div>
@@ -231,7 +229,7 @@
         }
 
         function isValidName(name) {
-            var pattern = /^[A-Za-z\s]+$/; // Regex for alphabetic characters and spaces
+            var pattern = /^[A-Za-z\s]+$/;
             return pattern.test(name);
         }
 
@@ -254,7 +252,7 @@
         }
 
         function submitFeedback() {
-            // Validate form
+            
             var feedbackName = document.getElementById('feedback-name').value;
             var feedbackEmail = document.getElementById('feedback-email').value;
             var feedback = document.getElementById('feedback').value;
