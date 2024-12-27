@@ -15,18 +15,16 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column; /* Added to stack elements vertically */
+            flex-direction: column;
             background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(0, 255, 255, 0.8));
             background-size: cover;
         }
-
-        /* VogueVine Title Style */
         .voguevine-title {
-            font-size: 3em; /* Large font size */
-            font-weight: bold; /* Bold text */
-            color: black; /* Black color */
-            text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7); /* Text shadow for a stylish effect */
-            margin-bottom: 20px; /* Space below the title */
+            font-size: 3em;
+            font-weight: bold; 
+            color: black;
+            text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7);
+            margin-bottom: 20px;
         }
 
         .register-container {
@@ -107,7 +105,7 @@
     </style>
 </head>
 <body>
-    <div class="voguevine-title">VogueVine</div> <!-- Added VogueVine title -->
+    <div class="voguevine-title">VogueVine</div>
     <div class="register-container">
         <h2>Register</h2>
         <form id="registerForm">
@@ -164,8 +162,8 @@
             const confirmPassword = document.getElementById("confirm-password").value;
             const gender = document.getElementById("gender").value;
 
-            const namePattern = /^[A-Za-z]+$/; // Regex for alphabetic characters
-            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Regex for valid email format
+            const namePattern = /^[A-Za-z]+$/; 
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
             if (!firstName || !lastName || !usernameEmail || !password || !confirmPassword || !gender) {
                 alert("Please fill in all fields.");
