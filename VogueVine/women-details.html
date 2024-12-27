@@ -86,14 +86,14 @@
 </header>
 
 <div class="women-details" id="women-details">
-    <!-- Item details will be inserted dynamically here -->
+    
 </div>
 
 <footer>
     <p>&copy; 2024 VogueVine | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
 </footer>
 <script>
-// Define the product data
+
 const products = {
     "HOUSE OF MIRA":{ name: "HOUSE OF MIRA", price: 29.99, img: "https://assets.ajio.com/medias/sys_master/root/20240807/HzCJ/66b2b5291d763220fa64d1d1/-473Wx593H-700266462-blue-MODEL.jpg" },
     "STYLE QUOTIENT Full-Sleeve Shirt":{ name: "STYLE QUOTIENT Full-Sleeve Shirt", price: 34.99, img: "https://assets.ajio.com/medias/sys_master/root/20240712/aPll/6690ea091d763220fa6937a0/-473Wx593H-465144952-white-MODEL.jpg" },
@@ -185,14 +185,14 @@ const products = {
     "Women Embellished Toe-Ring Chunky Heeled Sandals":{ name: "Women Embellished Toe-Ring Chunky Heeled Sandals", price: 41.99, img: "https://assets.ajio.com/medias/sys_master/root/20240914/i7Tm/66e49a891d763220fae6e35d/-473Wx593H-700419126-gold-MODEL.jpg" }
 };
 
-// Function to get product details from the URL
+
 function getProductDetailsFromURL() {
     const urlParams = new URLSearchParams(window.location.search);
-    const productName = urlParams.get('id'); // Get product name from URL
-    return products[productName]; // Return the product object
+    const productName = urlParams.get('id'); 
+    return products[productName]; 
 }
 
-// Function to display product details
+
 function displayProductDetails() {
     const product = getProductDetailsFromURL();
     
@@ -201,7 +201,7 @@ function displayProductDetails() {
         return;
     }
     
-    // Construct the HTML for the item details
+
     const itemDetailsHTML = `
         <div class="item-image">
             <img src="${ product.img}" alt="${product.name}">
@@ -216,25 +216,25 @@ function displayProductDetails() {
         </div>
     `;
     
-    // Inject the HTML into the page
+    
     document.getElementById('women-details').innerHTML = itemDetailsHTML;
 
-    // Add event listeners to the buttons
+    
     document.getElementById('buy-btn').addEventListener('click', () => buyNow(product.name));
     document.getElementById('cart-btn').addEventListener('click', () => addToCart(product.name));
 }
 
-// Function to handle Buy Now button click
+
 function buyNow(productName) {
     alert(`Thank you for choosing to buy "${productName}"! Proceeding to checkout.`);
 }
 
-// Function to handle Add to Cart button click
+
 function addToCart(productName) {
     alert(`"${productName}" has been added to your cart.`);
 }
 
-// Initialize the page by displaying the product details
+
 displayProductDetails();
 </script>
 
