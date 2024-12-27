@@ -94,7 +94,7 @@
 
         .category {
             margin-bottom: 40px;
-            display: none; /* Initially hide all categories */
+            display: none; 
         }
 
         .category h2 {
@@ -111,7 +111,7 @@
         }
 
         .col {
-            width: 23%; /* Adjusted to show 4 items per row */
+            width: 23%; 
             margin-bottom: 20px;
             padding: 15px;
             background-color: #000000;
@@ -190,7 +190,6 @@
     </div>
 
     <div class="container" id="product-container">
-        <!-- Categories will be generated dynamically here -->
     </div>
 
     <footer>
@@ -390,7 +389,7 @@
         }
 
         function redirectToItemDetails(itemName) {
-            // Redirect to item details page with the item name as a query parameter
+        
             window.location.href = `women-details.html?id=${encodeURIComponent(itemName)}`;
         }
 
@@ -398,7 +397,7 @@
             generateProducts(category);
         }
 
-        // Initialize page by displaying all products
+        
         generateProducts('all');
     </script>
 </body>
