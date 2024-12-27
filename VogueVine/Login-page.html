@@ -13,20 +13,20 @@
         body {
             height: 100vh;
             display: flex;
-            flex-direction: column; /* Stack elements vertically */
-            justify-content: center; /* Center vertically */
-            align-items: center; /* Center horizontally */
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(0, 255, 255, 0.8));
             background-size: cover;
         }
 
         .voguevine-title {
-            font-size: 3em; /* Large font size */
-            font-weight: bold; /* Bold text */
-            color: black; /* Black color */
-            text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7); /* Text shadow for a stylish effect */
-            margin-bottom: 20px; /* Space below the title */
-            text-align: center; /* Center the title */
+            font-size: 3em;
+            font-weight: bold; 
+            color: black; 
+            text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7); 
+            margin-bottom: 20px; 
+            text-align: center; 
         }
 
         .login-container {
@@ -211,7 +211,6 @@
             if (!username || !password) {
                 alert("Please fill in all fields.");
             } else {
-                // Redirect to the next page after successful validation
                 window.location.href = "homepage.html";
             }
         });
