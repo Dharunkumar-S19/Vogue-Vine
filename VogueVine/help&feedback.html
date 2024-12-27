@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>VogueVine</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* Header Style */
+        header {
+            background: linear-gradient(90deg, #00bcd4, #006064);
+            color: #fff;
+            text-align: center;
+            padding: 80px 20px;
+            position: relative;
+            overflow: hidden;
+            animation: headerGlow 5s infinite alternate ease-in-out;
+        }
+        header h1 {
+            font-size: 3em;
+            font-weight: bold;
+            margin: 0;
+            text-shadow: 4px 4px 10px #00e5ff;
+            animation: textZoom 2s ease-in-out forwards;
+        }
+
+        /* Container Style */
+        .container {
+            max-width: 600px;  /* Reduced width */
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #111;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 188, 212, 0.5);
+            transform: translateY(30px);
+            opacity: 0;
+            animation: fadeInUp 1.5s ease forwards;
+        }
+
+        .form-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Form Styles */
+        input, textarea, select {
+            background-color: #222;
+            border: 1px solid #00e5ff;
+            color: #fff;
+            padding: 10px;
+            margin: 15px 0;
+            font-size: 1em;
+            border-radius: 5px;
+            width: 100%;
+            transition: border 0.3s ease, background-color 0.3s ease;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            background-color: #333;
+            border: 1px solid #00bcd4;
+        }
+
+        label {
+            font-size: 1.1em;
+            margin-bottom: 5px;
+            color: #00e5ff;
+        }
+
+        .button {
+            background-color: #00bcd4;
+            color: #fff;
+            border: none;
+            padding: 15px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #006064;
+            transform: translateY(-5px);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            color: #00e5ff;
+            font-size: 2em;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            position: relative;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #00e5ff;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.5s ease;
+        }
+
+        .section-title h2:hover::after {
+            transform: scaleX(1);
+        }
+
+        /* Footer Style */
+        footer {
+            background: linear-gradient(90deg, #006064, #00bcd4);
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-size: 1em;
+            text-shadow: 1px 1px #000;
+            transition: transform 0.5s ease;
+        }
+
+        footer:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes headerGlow {
+            0% ```css
+            {
+                background: linear-gradient(90deg, #00bcd4, #006064);
+            }
+            100% {
+                background: linear-gradient(90deg, #006064, #00bcd4);
+            }
+        }
+
+        @keyframes textZoom {
+            0% {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Help & Feedback</h1>
+    </header>
+    
+    <div class="container">
+        <!-- Title Section -->
+        <div class="section-title">
+            <h2>How Can We Help You?</h2>
+        </div>
+        
+        <!-- Help Form -->
+        <div class="form-container">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+            <label for="query">Your Query:</label>
+            <textarea id="query" name="query" rows="6" placeholder="Please describe your issue or query" required></textarea>
+
+            <label for="category">Query Category:</label>
+            <select id="category" name="category" required>
+                <option value="Order Issue">Order Issue</option>
+                <option value="Product Query">Product Query</option>
+                <option value="Returns & Exchanges">Returns & Exchanges</option>
+                <option value="Shipping Information">Shipping Information</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <button class="button" type="button" onclick="submitQuery()">Submit Query</button>
+        </div>
+
+        <!-- Feedback Form -->
+        <div class="section-title">
+            <h2>Provide Your Feedback</h2>
+        </div>
+
+        <div class="form-container">
+            <label for="feedback-name">Full Name:</label>
+            <input type="text" id="feedback-name" name="feedback-name" placeholder="Your Name" required>
+
+            <label for="feedback-email">Email Address:</label>
+            <input type="email" id="feedback-email" name="feedback-email" placeholder="Your Email" required>
+
+            <label for="feedback">Your Feedback:</label>
+            <textarea id="feedback" name="feedback" rows="6" placeholder="We appreciate your feedback" required></textarea>
+
+            <button class="button" type="button" onclick="submitFeedback()">Submit Feedback</button>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 VogueVine. Thank you for your feedback!</p>
+    </footer>
+
+    <script>
+        function isValidEmail(email) {
+            var pattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            return pattern.test(email);
+        }
+
+        function isValidName(name) {
+            var pattern = /^[A-Za-z\s]+$/; // Regex for alphabetic characters and spaces
+            return pattern.test(name);
+        }
+
+        function submitQuery() {
+            // Validate form
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var query = document.getElementById('query').value;
+            var category = document.getElementById('category').value;
+
+            if (name && email && query && category) {
+                if (isValidEmail(email) && isValidName(name)) {
+                    alert("Your query has been submitted successfully. We'll get back to you soon!");
+                } else {
+                    alert("Please enter a valid email address and ensure your name contains only alphabetic characters.");
+                }
+            } else {
+                alert("Please fill in all fields before submitting.");
+            }
+        }
+
+        function submitFeedback() {
+            // Validate form
+            var feedbackName = document.getElementById('feedback-name').value;
+            var feedbackEmail = document.getElementById('feedback-email').value;
+            var feedback = document.getElementById('feedback').value;
+
+            if (feedbackName && feedbackEmail && feedback) {
+                if (isValidEmail(feedbackEmail) && isValidName(feedbackName)) {
+                    alert("Thank you for your valuable feedback!");
+                } else {
+                    alert("Please enter a valid email address and ensure your name contains only alphabetic characters.");
+                }
+            } else {
+                alert(" Please fill in all fields before submitting.");
+            }
+        }
+    </script>
+</body>
+</html>

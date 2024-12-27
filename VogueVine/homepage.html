@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>VogueVine</title>
+    <!-- Import Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #1a1a1a;
+            color: #fff;
+            line-height: 1.6;
+            padding-top: 60px; /* Prevent navbar overlap */
+            display: flex;
+            flex-direction: row;
+        }
+
+        /* Navbar */
+        header {
+            background: linear-gradient(90deg, #00ffff, #009999);
+            color: #fff;
+            padding: 10px 20px;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        header nav ul li {
+            margin: 0 10px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        header nav ul li a:hover {
+            color: #00ffff;
+        }
+
+        /* Layout */
+        .categories {
+            width: 250px;
+            background: linear-gradient(135deg, #00ffff, #009999);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            height: calc(100vh - 60px); /* Full height except navbar */
+            position: fixed;
+            top: 60px;
+            left: 0;
+        }
+
+        .categories h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #000;
+            font-size: 1.5rem;
+        }
+
+        .categories ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .categories ul li button,
+        .categories ul li a {
+            width: 100%;
+            padding: 15px;
+            background-color: #00ffff;
+            color: #000;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.2s;
+            text-decoration: none;
+            display: block;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .categories ul li button:hover,
+        .categories ul li a:hover {
+            background-color: #009999;
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .main-layout {
+            flex-grow: 1;
+            margin-left: 270px; /* Space for categories */
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+        }
+
+        /* Image Block */
+        .image-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .image-block {
+            width: 45%;
+        }
+
+        .image-block img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            opacity: 0; /* Initial state */
+            transform: scale(0.95); /* Slight zoom-out */
+            animation: fadeInSlow 2s ease-out forwards; /* Fade-in animation */
+        }
+
+        /* Fade-in Animation */
+        @keyframes fadeInSlow {
+            0% {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .description {
+            width: 45%;
+            padding: 20px;
+            font-size: 1.2rem;
+            line-height: 1.5;
+            color: #ccc;
+            background-color: #2b2b2b;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .categories {
+                position: static;
+                width: 100%;
+                height: auto;
+            }
+
+            .main-layout {
+                margin-left: 0;
+            }
+
+            .image-container {
+                flex-direction: column;
+            }
+
+            .image-block,
+            .description {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <div class="container">
+            <h1 style="color: black;">VogueVine</h1>
+            <div class="navbar-right">
+                <nav>
+                    <ul>
+                        <li><a href="C:\Users\divya\OneDrive\Pictures\homepage.html">Home</a></li>
+                        <li><a href="C:\Users\divya\OneDrive\Pictures\about.html">About Us</a></li>
+                        <li><a href="C:\Users\divya\OneDrive\Pictures\service.html">Our Services</a></li>
+                        <li><a href="C:\Users\divya\OneDrive\Pictures\help&feedback.html">Help and Feedback</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Categories -->
+    <div class="categories">
+        <h2>Explore Styles</h2>
+        <ul>
+            <li><a href="C:\Users\divya\OneDrive\Pictures\men.html">For Men</a></li>
+            <li><a href="C:\Users\divya\OneDrive\Pictures\women.html">For Women</a></li>
+            <li><a href="C:\Users\divya\OneDrive\Pictures\kids.html">For Kids</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Layout -->
+    <div class="main-layout">
+        <!-- Image 1 -->
+        <div class="image-container">
+            <div class="image-block">
+                <img src="https://assets.ajio.com/medias/sys_master/root/20240612/kioV/666982dd16fd2c6e6abbeef2/-473Wx593H-700076783-coffee-MODEL.jpg" alt="Fashion Image 1">
+            </div>
+            <div class="description">
+                <h2>Coffee Brown Men's Fashion</h2>
+                <p>This stylish coffee brown shirt is perfect for a casual day out or a relaxed weekend. Made with breathable fabric, it is comfortable yet trendy, perfect for any occasion.</p>
+            </div>
+        </div>
+
+        <!-- Image 2 -->
+        <div class="image-container">
+            <div class="description">
+                <h2>Baby's Fashion</h2>
+                <p>Elegant lavender dress designed for sophisticated evening outings. The soft fabric and delicate cut give it a refined look that is sure to turn heads at any event.</p>
+            </div>
+            <div class="image-block">
+                <img src="https://assets.ajio.com/medias/sys_master/root/20240606/0jIn/6660c6f505ac7d77bba0ff07/-473Wx593H-700048628-pink-MODEL.jpg" alt="Fashion Image 2">
+            </div>
+        </div>
+
+        <!-- Image 3 -->
+        <div class="image-container">
+            <div class="image-block">
+                <img src="https://images-static.nykaa.com/uploads/872c74cd-57b7-42e3-bcd1-473bd22329ba.jpg?tr=w-360,cm-pad_resize" alt="Fashion Image 3">
+            </div>
+            <div class="description">
+                <h2>Trendy Kids Clothing</h2>
+                <p>This set of vibrant clothes for kids brings fun and energy to their wardrobe. Made with soft cotton fabric, it is perfect for playtime or casual outings with friends and family.</p>
+            </div>
+        </div>
+
+        <!-- Image 4 -->
+        <div class="image-container">
+            <div class="description">
+                <h2>Classic Blue for Men</h2>
+                <p>This classic blue jacket is a must-have for any men's wardrobe. Its versatile design pairs perfectly with casual or semi-formal attire. Made from high-quality materials, it offers both comfort and style.</p>
+            </div>
+            <div class="image-block">
+                <img src="https://assets.ajio.com/medias/sys_master/root/20230410/STNZ/6433e5c6711cf97ba7180bbc/-473Wx593H-443005671-darkblue-MODEL.jpg" alt="Fashion Image 4">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

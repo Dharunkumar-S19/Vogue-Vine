@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>VogueVine Welcome Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(0, 255, 255, 0.8));
+            background-size: cover;
+            color: #fff;
+        }
+
+        .welcome-container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .welcome-image {
+            width: 100%;
+            max-width: 300px; /* Reduce the maximum width */
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 255, 255, 0.3);
+        }
+
+        .voguevine-title {
+            font-size: 4em;
+            font-weight: bold;
+            color: black;
+            text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7);
+            margin-bottom: 10px;
+        }
+
+        .welcome-text {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: #00ffff;
+        }
+
+        .login-button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            background: linear-gradient(90deg, #00ffff, #005f5f);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .login-button:hover {
+            background: linear-gradient(90deg, #005f5f, #00ffff);
+            transform: scale(1.1);
+        }
+
+        .login-button a {
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome-container">
+        <img src="C:\Users\divya\OneDrive\Pictures\WhatsApp Image 2024-12-27 at 02.31.50_56b4e5b1.jpg" height="200px" width="250px" alt="Welcome to VogueVine" class="welcome-image">
+        <div class="voguevine-title">VogueVine</div>
+        <p class="welcome-text">Welcome to the Fashion World</p>
+        <button class="login-button">
+            <a href="login-page.html">Click Here to Login</a>
+        </button>
+    </div>
+</body>
+</html>
