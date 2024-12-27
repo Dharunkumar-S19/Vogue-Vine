@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <title>VogueVine</title>
-    <!-- Import Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -16,12 +15,12 @@
             background-color: #1a1a1a;
             color: #fff;
             line-height: 1.6;
-            padding-top: 60px; /* Prevent navbar overlap */
+            padding-top: 60px; 
             display: flex;
             flex-direction: row;
         }
 
-        /* Navbar */
+        
         header {
             background: linear-gradient(90deg, #00ffff, #009999);
             color: #fff;
@@ -60,7 +59,7 @@
             color: #00ffff;
         }
 
-        /* Layout */
+        
         .categories {
             width: 250px;
             background: linear-gradient(135deg, #00ffff, #009999);
@@ -68,7 +67,7 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
-            height: calc(100vh - 60px); /* Full height except navbar */
+            height: calc(100vh - 60px); 
             position: fixed;
             top: 60px;
             left: 0;
@@ -115,14 +114,14 @@
 
         .main-layout {
             flex-grow: 1;
-            margin-left: 270px; /* Space for categories */
+            margin-left: 270px; 
             padding: 20px;
             display: flex;
             flex-direction: column;
             gap: 60px;
         }
 
-        /* Image Block */
+        
         .image-container {
             display: flex;
             justify-content: space-between;
@@ -139,12 +138,12 @@
             height: auto;
             border-radius: 10px;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-            opacity: 0; /* Initial state */
-            transform: scale(0.95); /* Slight zoom-out */
-            animation: fadeInSlow 2s ease-out forwards; /* Fade-in animation */
+            opacity: 0; 
+            transform: scale(0.95); 
+            animation: fadeInSlow 2s ease-out forwards; 
         }
 
-        /* Fade-in Animation */
+        
         @keyframes fadeInSlow {
             0% {
                 opacity: 0;
@@ -190,7 +189,6 @@
     </style>
 </head>
 <body>
-    <!-- Navbar -->
     <header>
         <div class="container">
             <h1 style="color: black;">VogueVine</h1>
@@ -207,7 +205,7 @@
         </div>
     </header>
 
-    <!-- Categories -->
+    
     <div class="categories">
         <h2>Explore Styles</h2>
         <ul>
@@ -217,9 +215,8 @@
         </ul>
     </div>
 
-    <!-- Main Layout -->
+    
     <div class="main-layout">
-        <!-- Image 1 -->
         <div class="image-container">
             <div class="image-block">
                 <img src="https://assets.ajio.com/medias/sys_master/root/20240612/kioV/666982dd16fd2c6e6abbeef2/-473Wx593H-700076783-coffee-MODEL.jpg" alt="Fashion Image 1">
@@ -230,7 +227,7 @@
             </div>
         </div>
 
-        <!-- Image 2 -->
+        
         <div class="image-container">
             <div class="description">
                 <h2>Baby's Fashion</h2>
@@ -241,7 +238,7 @@
             </div>
         </div>
 
-        <!-- Image 3 -->
+        
         <div class="image-container">
             <div class="image-block">
                 <img src="https://images-static.nykaa.com/uploads/872c74cd-57b7-42e3-bcd1-473bd22329ba.jpg?tr=w-360,cm-pad_resize" alt="Fashion Image 3">
@@ -252,7 +249,7 @@
             </div>
         </div>
 
-        <!-- Image 4 -->
+        
         <div class="image-container">
             <div class="description">
                 <h2>Classic Blue for Men</h2>
