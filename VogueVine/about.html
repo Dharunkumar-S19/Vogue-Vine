@@ -7,38 +7,38 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #000; /* Deep black background */
-            color: #fff; /* White text for contrast */
-            overflow-x: hidden; /* Prevent horizontal scroll from transitions */
+            background-color: #000; 
+            color: #fff; 
+            overflow-x: hidden; 
         }
         header {
-            background: linear-gradient(90deg, #00bcd4, #006064); /* Cyan gradient */
+            background: linear-gradient(90deg, #00bcd4, #006064); 
             color: #fff;
             text-align: center;
             padding: 40px 20px;
-            transition: background 1s ease-in-out; /* Slow transition */
+            transition: background 1s ease-in-out; 
         }
         header:hover {
-            background: linear-gradient(90deg, #006064, #00bcd4); /* Reversed gradient on hover */
+            background: linear-gradient(90deg, #006064, #00bcd4); 
         }
         header h1 {
             font-size: 2.5em;
             font-weight: bold;
             margin: 0;
-            text-shadow: 2px 2px #000; /* Black shadow for depth */
-            animation: fadeIn 2s ease-in-out; /* Slower fade-in */
+            text-shadow: 2px 2px #000; 
+            animation: fadeIn 2s ease-in-out; 
         }
         .container {
             max-width: 1200px;
             margin: 30px auto;
             padding: 20px;
-            background-color: #111; /* Deep black for contrast */
+            background-color: #111; 
             border-radius: 10px;
-            box-shadow: 0 8px 15px rgba(0, 188, 212, 0.5); /* Cyan glow effect */
+            box-shadow: 0 8px 15px rgba(0, 188, 212, 0.5); 
             animation: slideIn 1.5s ease-out;
         }
         h2 {
-            color: #00e5ff; /* Bright cyan for section headings */
+            color: #00e5ff; 
             font-size: 1.8em;
             margin-bottom: 10px;
             text-transform: uppercase;
@@ -56,17 +56,17 @@
             background: #00e5ff;
             transform: scaleX(0);
             transform-origin: left;
-            transition: transform 1s ease; /* Slower underline animation */
+            transition: transform 1s ease; 
         }
         h2:hover::after {
             transform: scaleX(1);
         }
         p {
-            color: #bbb; /* Light gray text for readability */
+            color: #bbb; 
             font-size: 1.1em;
             line-height: 1.8;
             opacity: 0;
-            animation: fadeIn 2s ease-in-out forwards; /* Slower fade-in for text */
+            animation: fadeIn 2s ease-in-out forwards; 
         }
         .section {
             margin-bottom: 40px;
@@ -82,30 +82,30 @@
             padding: 0;
         }
         .team-section ul li {
-            color: #00e5ff; /* Cyan text for team names */
+            color: #00e5ff; 
             font-size: 1.2em;
             margin: 10px 0;
-            text-shadow: 1px 1px #000; /* Subtle shadow */
-            transition: transform 0.6s ease, color 0.6s ease; /* Slower transformations */
+            text-shadow: 1px 1px #000; 
+            transition: transform 0.6s ease, color 0.6s ease; 
         }
         .team-section ul li:hover {
-            transform: translateX(15px); /* Increased hover movement */
-            color: #00bcd4; /* Lighter cyan on hover */
+            transform: translateX(15px); 
+            color: #00bcd4; 
         }
         footer {
-            background: linear-gradient(90deg, #006064, #00bcd4); /* Cyan gradient */
+            background: linear-gradient(90deg, #006064, #00bcd4); 
             color: #fff;
             text-align: center;
             padding: 20px;
             font-size: 1em;
-            text-shadow: 1px 1px #000; /* Subtle shadow */
-            transition: transform 1s ease; /* Slower hover animation */
+            text-shadow: 1px 1px #000; 
+            transition: transform 1s ease;
         }
         footer:hover {
-            transform: translateY(-10px); /* More noticeable lift */
+            transform: translateY(-10px); 
         }
 
-        /* Animations */
+        
         @keyframes fadeIn {
             from {
                 opacity: 0;
