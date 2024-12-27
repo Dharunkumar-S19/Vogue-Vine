@@ -84,7 +84,6 @@
 </header>
 
 <div class="kids-details" id="kids-details">
-    <!-- Item details will be inserted dynamically here -->
 </div>
 
 <footer>
@@ -92,7 +91,7 @@
 </footer>
 
 <script>
-// Define the product data
+
 const products = {
     "SHIRT AND DHOTI(white)":{ name: "SHIRT AND DHOTI(white)", price: 29.99, img:"https://assets.ajio.com/medias/sys_master/root/20220330/Y1L8/6244959af997dd03e23da406/-473Wx593H-464094688-white-MODEL.jpg" },
                     "Mandarin Colar Printed long KURTA":{ name: "Mandarin Colar Printed long KURTA", price: 34.99, img:"https://assets.ajio.com/medias/sys_master/root/20230802/xaL6/64ca83daa9b42d15c987396c/-473Wx593H-466413739-maroon-MODEL.jpg"  },
@@ -156,14 +155,13 @@ const products = {
                     "Men Brass Bracelet":{ name: "Men Brass Bracelet", price: 69.99, img: "https://assets.ajio.com/medias/sys_master/root/20241029/Sp5N/6720bac1f9b8ef490bee71f1/-473Wx593H-700670087-white-MODEL3.jpg" }
                                   
 };      
-// Function to get product details from the URL
+
 function getProductDetailsFromURL() {
     const urlParams = new URLSearchParams(window.location .search);
-    const productName = urlParams.get('id'); // Get product name from URL
-    return products[productName]; // Return the product object
+    const productName = urlParams.get('id'); 
+    return products[productName]; 
 }
 
-// Function to display product details
 function displayProductDetails() {
     const product = getProductDetailsFromURL();
     
@@ -172,7 +170,7 @@ function displayProductDetails() {
         return;
     }
     
-    // Construct the HTML for the item details
+    
     const itemDetailsHTML = `
         <div class="item-image">
             <img src="${ product.img}" alt="${product.name}">
@@ -187,25 +185,25 @@ function displayProductDetails() {
         </div>
     `;
     
-    // Inject the HTML into the page
+    
     document.getElementById('kids-details').innerHTML = itemDetailsHTML;
 
-    // Add event listeners to the buttons
+    
     document.getElementById('buy-btn').addEventListener('click', () => buyNow(product.name));
     document.getElementById('cart-btn').addEventListener('click', () => addToCart(product.name));
 }
 
-// Function to handle Buy Now button click
+
 function buyNow(productName) {
     alert(`Thank you for choosing to buy "${productName}"! Proceeding to checkout.`);
 }
 
-// Function to handle Add to Cart button click
+
 function addToCart(productName) {
     alert(`"${productName}" has been added to your cart.`);
 }
 
-// Initialize the page by displaying the product details
+
 displayProductDetails();
 </script>
 
